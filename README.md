@@ -1,1 +1,1 @@
-this is printf project by alx-students
+this is a collaboration between sizwe zwane and salehgomaa alx students
