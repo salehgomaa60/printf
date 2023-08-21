@@ -8,11 +8,11 @@
  */
 int _puts(char *str)
 {
-	char *x = str;
+        char *x = str;
 
-	while (*str)
-		_putchar(*str++);
-	return (str - x);
+        while (*str)
+                _putchar(*str++);
+        return (str - x);
 }
 
 /**
@@ -24,15 +24,15 @@ int _puts(char *str)
  */
 int _putchar(int c)
 {
-	static int y;
-	static char buf[OUTPUT_BUF_SIZE];
+        static int y;
+        static char buf[OUTPUT_BUF_SIZE];
 
-	if (c == BUF_FLUSH || y >= OUTPUT_BUF_SIZE)
-	{
-		write(1, buf, y);
-		y = 0;
-	}
-	if (c != BUF_FLUSH)
-		buf[y++] = c;
-	return (1);
+        if (c == BUF_FLUSH || y >= OUTPUT_BUF_SIZE)
+        {
+                write(1, buf, y);
+                y = 0;
+        }
+        if (c != BUF_FLUSH)
+                buf[y++] = c;
+        return (1);
 }
